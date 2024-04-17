@@ -49,6 +49,7 @@ const App = () => {
                         justo vel libero vehicula maximus.<br />
 
                         {/* <button className='p-3 mt-4 bg-orange-500 rounded-2xl text-2xl shadow-xl'> Explure Our Cart </button> */}
+
                         <button>
 
                             <NavLink
@@ -56,12 +57,11 @@ const App = () => {
                                 className={({ isActive }) =>
                                     `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700" : ""} p-3 mt-4 bg-orange-500 rounded-2xl text-2xl shadow-xl`
                                 }
-                                data-aos="fade-left" data-aos-delay="500"
+                                data-aos="fade-up" data-aos-delay="500"
                             >
                                 Explure Our Cart
                             </NavLink>
                         </button>
-
                     </p>
 
                 </div>
