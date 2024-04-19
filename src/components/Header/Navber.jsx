@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import Switch from './ToogleBtn';
+import HomeLog from '../../assets/E-Comm.png'
+
 // import reactLogo from '../../assets/react.svg'
 
 export default function Header() {
@@ -8,21 +10,24 @@ export default function Header() {
         <header className="shadow sticky z-50 top-0">
             <nav className=" px-4 lg:px-6 pb-2 text-center pt-2" id='Navber'>
                 <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl text-center">
-                    <Link to="/" className="flex items-center ">
-                        {/* <img
-                            src="https://alexharkness.com/wp-content/uploads/2020/06/logo-2.png"
+                    <Link to="/contact" className="flex items-center ">
+                        
+                        <img
+                            src={HomeLog}
                             className="mr-3 h-12"
                             alt="Logo"
-                        /> */}
-                        E-comm
+                        />
                     </Link>
+                    
                     <div className="flex items-center lg:order-2 ">
+
                         <Link
                             to="#"
                             className=" hover:bg-gray-500 focus:ring-1 focus:ring-gray-100 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 focus:outline-none"
                         >
                             Login
                         </Link>
+
                         {/* <Link
                             to="#"
                             className="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"

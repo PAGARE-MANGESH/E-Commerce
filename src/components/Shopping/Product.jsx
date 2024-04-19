@@ -202,7 +202,6 @@ const ProductPage = () => {
                     </div>
                 ))}
             </div>
-
             {showCartSection && (
                 <div className="mt-8 text-center border-4 p-5 rounded-5xl">
                     <h2 className="text-2xl font-semibold mb-4">My Shopping</h2>
