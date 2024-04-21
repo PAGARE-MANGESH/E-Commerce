@@ -107,11 +107,11 @@ const ProductPage = () => {
 
     return (
         <div className="container mx-auto py-8 mb-5 relative">
-            <h1 className="text-3xl font-bold font-semibold mb-4 text-center mb-5" data-aos="fade-right" data-aos-delay="500">Products</h1>
+            <h1 className="text-3xl font-bold font-semibold mb-4 text-center mb-5 text-orange-700" data-aos="fade-right" data-aos-delay="500">Products</h1>
 
             <div className="flex flex-wrap justify-center mb-4" data-aos="fade-up" data-aos-delay="500" >
                 <button
-                    className={`mx-2 mb-2 sm:mb-0 w-full sm:w-auto ${filter === null ? 'border-4 border-b-indigo-400' : ''} font-semibold py-2 px-4 rounded relative`}
+                    className={`mx-2 mb-2 sm:mb-0 w-full sm:w-auto ${filter === null ? 'text-orange-700' : ''} font-semibold py-2 px-4 rounded relative`}
 
                     onClick={() => {
                         setFilter(null);
@@ -122,7 +122,7 @@ const ProductPage = () => {
                     All
                 </button>
                 <button
-                    className={`mx-2 mb-2 sm:mb-0 w-full sm:w-auto ${filter === 'men' ? 'border-4 border-b-indigo-400' : ''} font-semibold py-2 px-4 rounded relative`}
+                    className={`mx-2 mb-2 sm:mb-0 w-full sm:w-auto ${filter === 'men' ? 'text-orange-700' : ''} font-semibold py-2 px-4 rounded relative`}
 
                     onClick={() => {
                         setFilter('men');
@@ -134,7 +134,7 @@ const ProductPage = () => {
                     Men
                 </button>
                 <button
-                    className={`mx-2 mb-2 sm:mb-0 w-full sm:w-auto ${filter === 'women' ? 'border-4 border-b-indigo-400' : ''} font-semibold py-2 px-4 rounded relative`}
+                    className={`mx-2 mb-2 sm:mb-0 w-full sm:w-auto ${filter === 'women' ? 'text-orange-700' : ''} font-semibold py-2 px-4 rounded relative`}
 
                     onClick={() => {
                         setFilter('women');
@@ -146,7 +146,7 @@ const ProductPage = () => {
                     Women
                 </button>
                 <button
-                    className={`mx-2 mb-2 sm:mb-0 w-full sm:w-auto ${filter === 'shopping' ? 'border-4 border-b-indigo-400' : ''} font-semibold py-2 px-4 rounded relative`}
+                    className={`mx-2 mb-2 sm:mb-0 w-full sm:w-auto ${filter === 'shopping' ? 'text-orange-700' : ''} font-semibold py-2 px-4 rounded relative`}
 
                     onClick={handleShoppingClick}
                     data-tip="MyShopping Tooltip"

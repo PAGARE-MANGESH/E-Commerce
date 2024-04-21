@@ -52,7 +52,7 @@ const AboutPage = () => {
             className="min-h-screen  flex justify-center items-center"
         >
             <div className="max-w-7xl mx-auto p-6  rounded-lg  shadow-sm mb-2">
-                <h1 className="text-3xl font-bold mb-6 text-center" data-aos="fade-up" data-aos-delay="500">About Our E-commerce Website</h1>
+                <h1 className="text-3xl font-bold mb-6 text-center text-orange-700" data-aos="fade-up" data-aos-delay="500">About Our E-commerce Website</h1>
                 <p className="m-14 text-xl text-gray-500 text-center" data-aos="fade-down" data-aos-delay="500">
                     Welcome to our E-commerce Headphone experience! Here, sound meets style, and every beat becomes a statement.
                     Dive into our world of immersive audio and cutting-edge technology. Discover your perfect pair of headphones,
@@ -68,7 +68,7 @@ const AboutPage = () => {
 
                     </div>
                     <div className="flex flex-col justify-center items-center">
-                        <h2 className="text-2xl font-bold mb-4">Our Team</h2>
+                        <h2 className="text-2xl font-bold mb-4 text-orange-700">Our Team</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             {teamMembers.map((member) => (
                                 <div key={member.id} className="flex items-center space-x-2">
@@ -97,7 +97,7 @@ const AboutPage = () => {
                 </div> */}
 
                 <div class="mt-8 text-center">
-                    <h2 class="text-2xl font-bold mb-4">Our Achievements</h2>
+                    <h2 class="text-2xl font-bold mb-4 text-orange-700">Our Achievements</h2>
                     <p class="text-lg mb-4 " data-aos='fade-up' data-aos-deplay='500' >
                         We are honored to have earned a {starRating}-star rating from thousands of satisfied customers.
                         Your trust and support have been instrumental in our continuous growth and improvement.

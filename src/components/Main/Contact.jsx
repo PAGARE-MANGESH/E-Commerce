@@ -45,7 +45,7 @@ const ContactPage = () => {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen mb-5 mt-2">
-            <h1 className="text-3xl font-bold mb-4 "> Contact </h1>
+            <h1 className="text-3xl font-bold mb-4 text-orange-700"> Contact </h1>
             <div className="max-w-6xl w-full p-6 bg-white shadow-xl rounded-lg grid grid-cols-1 gap-6 sm:grid-cols-2">
                 {/* Contact form */}
                 <form className="space-y-4 text-center text-gray-500" onSubmit={handleFormSubmit} data-aos="fade-down" data-aos-delay="800">

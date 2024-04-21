@@ -22,28 +22,30 @@ export default function Footer() {
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
                                     <NavLink to="/" className={({ isActive }) =>
-                                        ` ${isActive ? "text-orange-700" : ""} hover:underline `
+                                        ` ${isActive ? "text-orange-700" : ""} hover:text-orange-700  hover:underline`
                                     }
                                     >
                                         Home
                                     </NavLink>
                                 </li>
                                 <li className="mb-4">
-                                    <NavLink to="/shopping" className={({ isActive }) => `${isActive ? "text-orange-700" : " "} hover:underline `}>
+                                    <NavLink to="/shopping" className={({ isActive }) => `${isActive ? "text-orange-700" : " "} hover:text-orange-700  hover:underline`}>
                                         Shoping
                                     </NavLink>
                                 </li>
 
                                 <li className="mb-4">
-                                    <NavLink to="/about" className={({ isActive }) => `${isActive ? 'text-orange-700' : ''} hover:underline `}>
+                                    <NavLink to="/about" className={({ isActive }) => `${isActive ? 'text-orange-700' : ''} hover:text-orange-700  hover:underline`}>
                                         About
                                     </NavLink>
                                 </li>
+
                                 <li>
-                                    <NavLink to="/contact" className={({ isActive }) => `${isActive ? 'text-orange-700' : ''} hover:underline `}>
+                                    <NavLink to="/contact" className={({ isActive }) => `${isActive ? 'text-orange-700' : ''} hover:text-orange-700  hover:underline `}>
                                         Contact
                                     </NavLink>
                                 </li>
+
                             </ul>
                         </div>
                         <div>
@@ -61,7 +63,7 @@ export default function Footer() {
 
                                 </li>
                                 <li>
-                                    <Link to="/" className="hover:underline">
+                                    <Link to="/" className="hover:text-orange-700  hover:underline">
                                         Discord
                                     </Link>
                                 </li>
@@ -71,12 +73,12 @@ export default function Footer() {
                             <h2 className="mb-6 text-sm font-semibold text-gray-500 uppercase">Legal</h2>
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
-                                    <Link to="#" className="hover:underline">
+                                    <Link to="#" className="hover:text-orange-700  hover:underline">
                                         Privacy Policy
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="#" className="hover:underline">
+                                    <Link to="#" className="hover:text-orange-700  hover:underline">
                                         Terms &amp; Conditions
                                     </Link>
                                 </li>
@@ -88,13 +90,13 @@ export default function Footer() {
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <span className="text-sm text-gray-500 sm:text-center">
                         © 2024
-                        <a href="https://hiteshchoudhary.com/" className="hover:underline">
+                        <a href=" https://pagare-mangesh.github.io/FirstPortfolio/" target='_blank' className="hover:text-orange-700  hover:underline">
                             Mangesh_Pagare
                         </a>
                         . All Rights Reserved.
                     </span>
                     <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
-                        <Link to="#" className="text-gray-500 hover:text-gray-900">
+                        <Link to="#" className="text-gray-500 hover:text-orange-700  hover:underline">
                             <svg
                                 className="w-4 h-4"
                                 aria-hidden="true"
@@ -110,7 +112,7 @@ export default function Footer() {
                             </svg>
                             <span className="sr-only">Facebook page</span>
                         </Link>
-                        <Link to="#" className="text-gray-500">
+                        <Link to="#" className="hover:text-orange-700  hover:underline">
                             <svg
                                 className="w-4 h-4"
                                 aria-hidden="true"
@@ -122,7 +124,7 @@ export default function Footer() {
                             </svg>
                             <span className="sr-only">Discord community</span>
                         </Link>
-                        <Link to="#" className="text-gray-500">
+                        <Link to="#" className="hover:text-orange-700  hover:underline">
                             <svg
                                 className="w-4 h-4"
                                 aria-hidden="true"
@@ -138,7 +140,7 @@ export default function Footer() {
                             </svg>
                             <span className="sr-only">Twitter page</span>
                         </Link>
-                        <Link to="#" className="text-gray-500">
+                        <Link to="#" className="hover:text-orange-700  hover:underline">
                             <svg
                                 className="w-4 h-4"
                                 aria-hidden="true"
@@ -154,7 +156,7 @@ export default function Footer() {
                             </svg>
                             <span className="sr-only">GitHub account</span>
                         </Link>
-                        <Link to="#" className="text-gray-500">
+                        <Link to="#" className="hover:text-orange-700  hover:underline">
                             <svg
                                 className="w-4 h-4"
                                 aria-hidden="true"

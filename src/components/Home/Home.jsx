@@ -1,5 +1,6 @@
 
 import React, { useEffect } from 'react';
+import { useAuth0 } from '@auth0/auth0-react'
 
 import Home1 from '../../assets/HomeImg.svg';
 import { Link, NavLink } from 'react-router-dom'
@@ -11,7 +12,10 @@ import AOS from 'aos';
 
 
 
+
 const App = () => {
+
+    const { user, isAuthenticated } = useAuth0()
 
     useEffect(() => {
 
@@ -43,7 +47,12 @@ const App = () => {
                 {/* Right side (text) */}
                 <div className="w-full md:w-1/2 p-4 md:mb-44">
                     <h1 className="text-3xl md:text-4xl font-bold text-center md:text-left mb-10" data-aos="fade-down" data-aos-delay="500">
-                        Welcome To Our E-commerce
+                        Welcome To Our E-Commerce
+                        {
+                            isAuthenticated && <p className='text-orange-700 hover:underline'> {user.name}</p>
+
+                        }
+
                     </h1>
                     <p className="text-lg text-center md:text-left" data-aos="fade-down" data-aos-delay="500" >
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec
