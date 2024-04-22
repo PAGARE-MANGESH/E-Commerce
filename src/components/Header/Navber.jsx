@@ -3,7 +3,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 
 import { Link, NavLink } from 'react-router-dom'
 import Switch from './ToogleBtn';
-import HomeLog from '../../assets/E-Comm.png'
+import HomeLog from '../../assets/Shopping.svg'
 
 // import reactLogo from '../../assets/react.svg'
 
@@ -25,14 +25,14 @@ export default function Header() {
                         />
                     </Link>
 
-                    <div className="flex items-center lg:order-2 ">
+                    <div className="flex items-center lg:order-2">
 
                         {
 
                             isAuthenticated ? <Link
                                 to="#"
                                 onClick={(e) => logout()}
-                                className="text-orange-700 hover:text-orange-700  border-b-2 border-transparent border-orange-700 focus:border-orange-700 transition-colors duration-300 ease-in-out"
+                                className="text-orange-700 hover:text-orange-700  border-b-2 border-transparent border-orange-700 focus:border-orange-700 transition-colors duration-300 ease-in-out mr-4"
                             >
 
                                 Logout
@@ -41,7 +41,7 @@ export default function Header() {
                                 <Link
                                     to="#"
                                     onClick={(e) => loginWithRedirect()}
-                                    className=" hover:text-orange-700 focus:ring-1 focus:ring-gray-100 font-medium rounded-lg text-sm lg:px-5 py-2 lg:py-2.5 focus:outline-none"
+                                    className=" hover:text-orange-700 focus:ring-1 focus:ring-gray-100 font-medium rounded-lg text-sm lg:px-5 py-2 lg:py-2.5 focus:outline-none mr-4"
                                 >
 
                                     Login

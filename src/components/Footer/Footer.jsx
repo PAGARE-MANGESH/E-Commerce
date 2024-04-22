@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom';
-import HomeLogo from '../../assets/E-Comm.png'
+import HomeLogo from '../../assets/Shopping.svg'
 
 export default function Footer() {
     return (
