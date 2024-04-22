@@ -111,7 +111,7 @@ const ProductPage = () => {
 
             <div className="flex flex-wrap justify-center mb-4" data-aos="fade-up" data-aos-delay="500" >
                 <button
-                    className={`mx-2 mb-2 sm:mb-0 w-full sm:w-auto ${filter === null ? 'text-orange-700' : ''} font-semibold py-2 px-4 rounded relative`}
+                    className={`mx-2 mb-2 sm:mb-0 w-full sm:w-auto ${filter === null ? 'text-orange-700 border-b-2 border-transparent border-orange-700 focus:border-orange-700 transition-colors duration-300 ease-in-out' : ''} font-semibold py-2 px-4 rounded relative `}
 
                     onClick={() => {
                         setFilter(null);
@@ -122,7 +122,7 @@ const ProductPage = () => {
                     All
                 </button>
                 <button
-                    className={`mx-2 mb-2 sm:mb-0 w-full sm:w-auto ${filter === 'men' ? 'text-orange-700' : ''} font-semibold py-2 px-4 rounded relative`}
+                    className={`mx-2 mb-2 sm:mb-0 w-full sm:w-auto ${filter === 'men' ? 'text-orange-700 border-b-2 border-transparent border-orange-700 focus:border-orange-700 transition-colors duration-300 ease-in-out' : ''} font-semibold py-2 px-4 rounded relative`}
 
                     onClick={() => {
                         setFilter('men');
@@ -134,7 +134,7 @@ const ProductPage = () => {
                     Men
                 </button>
                 <button
-                    className={`mx-2 mb-2 sm:mb-0 w-full sm:w-auto ${filter === 'women' ? 'text-orange-700' : ''} font-semibold py-2 px-4 rounded relative`}
+                    className={`mx-2 mb-2 sm:mb-0 w-full sm:w-auto ${filter === 'women' ? 'text-orange-700 border-b-2 border-transparent border-orange-700 focus:border-orange-700 transition-colors duration-300 ease-in-out' : ''} font-semibold py-2 px-4 rounded relative`}
 
                     onClick={() => {
                         setFilter('women');
@@ -146,7 +146,7 @@ const ProductPage = () => {
                     Women
                 </button>
                 <button
-                    className={`mx-2 mb-2 sm:mb-0 w-full sm:w-auto ${filter === 'shopping' ? 'text-orange-700' : ''} font-semibold py-2 px-4 rounded relative`}
+                    className={`mx-2 mb-2 sm:mb-0 w-full sm:w-auto ${filter === 'shopping' ? 'text-orange-700 border-b-2 border-transparent border-orange-700 focus:border-orange-700 transition-colors duration-300 ease-in-out' : ''} font-semibold py-2 px-4 rounded relative`}
 
                     onClick={handleShoppingClick}
                     data-tip="MyShopping Tooltip"

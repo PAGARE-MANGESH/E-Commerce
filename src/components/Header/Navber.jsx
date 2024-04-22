@@ -14,7 +14,7 @@ export default function Header() {
 
     return (
         <header className="shadow sticky z-50 top-0">
-            <nav className=" px-4 lg:px-6 pb-2 text-center pt-2" id='Navber'>
+            <nav className=" px-24 lg:px-6 pb-2 text-center pt-2" id='Navber'>
                 <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl text-center">
                     <Link to="/contact" className="flex items-center ">
 
@@ -28,10 +28,11 @@ export default function Header() {
                     <div className="flex items-center lg:order-2 ">
 
                         {
+
                             isAuthenticated ? <Link
                                 to="#"
                                 onClick={(e) => logout()}
-                                className=" hover:bg-gray-500 focus:ring-1 focus:ring-gray-100 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 focus:outline-none"
+                                className="text-orange-700 hover:text-orange-700  border-b-2 border-transparent border-orange-700 focus:border-orange-700 transition-colors duration-300 ease-in-out"
                             >
 
                                 Logout
@@ -46,6 +47,7 @@ export default function Header() {
                                     Login
 
                                 </Link>
+
                         }
 
 
@@ -67,8 +69,6 @@ export default function Header() {
                         </Link> */}
 
 
-
-
                         <Switch />
 
                     </div>
@@ -76,13 +76,13 @@ export default function Header() {
                         className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1 "
                         id="mobile-menu-2"
                     >
-                        <ul className="flex flex-col  font-medium lg:flex-row lg:space-x-8 lg:mt-0 ">
+                        <ul className="flex flex-col  font-medium lg:flex-row lg:space-x-8 lg:mt-0  ml-24 text-center ">
                             <li>
                                 <NavLink
                                     to="/"
                                     className={({ isActive }) =>
-                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700" : ""} border-b border-gray-900 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
-                                    }
+                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700 border-b-2 border-transparent border-orange-700 focus:border-orange-700 transition-colors duration-300 ease-in-out" : ""}  lg:hover:bg-transparent hover:text-orange-700`}
+                                // }border-b border-gray-900 hover:bg-gray-50  lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0
                                 >
                                     Home
                                 </NavLink>
@@ -91,8 +91,10 @@ export default function Header() {
                                 <NavLink
                                     to="/shopping"
                                     className={({ isActive }) =>
-                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700" : ""} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
-                                    }
+                                        // `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700 border-b-2 border-transparent border-orange-700 focus:border-orange-700 transition-colors duration-300 ease-in-out" : ""} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700 border-b-2 border-transparent border-orange-700 focus:border-orange-700 transition-colors duration-300 ease-in-out" : ""}  lg:hover:bg-transparent hover:text-orange-700`}
+
+
                                 >
                                     Shopping
                                 </NavLink>
@@ -101,8 +103,10 @@ export default function Header() {
                                 <NavLink
                                     to="/about"
                                     className={({ isActive }) =>
-                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700" : ""} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
-                                    }
+                                        // `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700 border-b-2 border-transparent border-orange-700 focus:border-orange-700 transition-colors duration-300 ease-in-out" : ""} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700 border-b-2 border-transparent border-orange-700 focus:border-orange-700 transition-colors duration-300 ease-in-out" : ""}  lg:hover:bg-transparent hover:text-orange-700`}
+
+
                                 >
                                     About
                                 </NavLink>
@@ -111,8 +115,10 @@ export default function Header() {
                                 <NavLink
                                     to="/contact"
                                     className={({ isActive }) =>
-                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700" : ""} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
-                                    }
+                                        // `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700 border-b-2 border-transparent border-orange-700 focus:border-orange-700 transition-colors duration-300 ease-in-out" : ""} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700  border-b-2 border-transparent border-orange-700 focus:border-orange-700 transition-colors duration-300 ease-in-out" : ""}  lg:hover:bg-transparent hover:text-orange-700`}
+
+
                                 >
                                     Contact
                                 </NavLink>

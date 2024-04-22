@@ -15,6 +15,8 @@ export default function Footer() {
                                 alt="Logo"
                             />
                         </Link>
+
+
                     </div>
                     <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                         <div>
@@ -22,26 +24,26 @@ export default function Footer() {
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
                                     <NavLink to="/" className={({ isActive }) =>
-                                        ` ${isActive ? "text-orange-700" : ""} hover:text-orange-700  hover:underline`
+                                        ` ${isActive ? "text-orange-700  border-b-2 border-transparent border-orange-700 focus:border-orange-700 transition-colors duration-300 ease-in-out" : ""} hover:text-orange-700 `
                                     }
                                     >
                                         Home
                                     </NavLink>
                                 </li>
                                 <li className="mb-4">
-                                    <NavLink to="/shopping" className={({ isActive }) => `${isActive ? "text-orange-700" : " "} hover:text-orange-700  hover:underline`}>
+                                    <NavLink to="/shopping" className={({ isActive }) => `${isActive ? "text-orange-700  border-b-2 border-transparent border-orange-700 focus:border-orange-700 transition-colors duration-300 ease-in-out" : " "} hover:text-orange-700  `}>
                                         Shoping
                                     </NavLink>
                                 </li>
 
                                 <li className="mb-4">
-                                    <NavLink to="/about" className={({ isActive }) => `${isActive ? 'text-orange-700' : ''} hover:text-orange-700  hover:underline`}>
+                                    <NavLink to="/about" className={({ isActive }) => `${isActive ? 'text-orange-700  border-b-2 border-transparent border-orange-700 focus:border-orange-700 transition-colors duration-300 ease-in-out' : ''} hover:text-orange-700  `}>
                                         About
                                     </NavLink>
                                 </li>
 
                                 <li>
-                                    <NavLink to="/contact" className={({ isActive }) => `${isActive ? 'text-orange-700' : ''} hover:text-orange-700  hover:underline `}>
+                                    <NavLink to="/contact" className={({ isActive }) => `${isActive ? 'text-orange-700  border-b-2 border-transparent border-orange-700 focus:border-orange-700 transition-colors duration-300 ease-in-out' : ''} hover:text-orange-700   `}>
                                         Contact
                                     </NavLink>
                                 </li>
