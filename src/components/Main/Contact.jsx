@@ -124,20 +124,11 @@ const ContactPage = () => {
 
                 <div className="mt-6 sm:mt-0" data-aos="fade-right" data-aos-delay="800">
 
-                    {/* <iframepb=!1m18!1m12!1m3!1d342321.7161105476!2d73.72894691770921!3d18.56698832397246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1712996473424!5m2!1sen!2sin"
-                        src="https://www.google.com/maps/embed?
-                        width="100%"
-                        height="450"
-                        style={{ border: 0 }}
-                        allowFullScreen=""
-                        loading="lazy"
-                        title="Google Map"
-                        className='shadow-xl'
-                    ></iframepb=!1m18!1m12!1m3!1d342321.7161105476!2d73.72894691770921!3d18.56698832397246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1712996473424!5m2!1sen!2sin> */}
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d142801.02799908794!2d75.16877348345594!3d19.859945636526735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb9815a369bc63%3A0x712d538b29a2a73e!2sAurangabad%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1713765646738!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
