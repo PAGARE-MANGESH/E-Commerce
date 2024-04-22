@@ -14,7 +14,7 @@ export default function Header() {
 
     return (
         <header className="shadow sticky z-50 top-0">
-            <nav className=" px-24 lg:px-6 pb-2 text-center pt-2" id='Navber'>
+            <nav className=" px-4 lg:px-6 pb-2 text-center pt-2" id='Navber'>
                 <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl text-center">
                     <Link to="/contact" className="flex items-center ">
 
