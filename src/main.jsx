@@ -9,7 +9,7 @@ import Layout from '../Layout.jsx'
 import Home from './components/Home/Home.jsx'
 import About from '../src/components/Main/About.jsx'
 import Contact from '../src/components/Main/Contact.jsx'
-import Shooping from '../src/components/Shopping/Product.jsx'
+import Shopping from '../src/components/Shopping/Product.jsx'
 
 
 
@@ -50,9 +50,9 @@ const router = createBrowserRouter(
     <Route path='/' element={<Layout />}>
 
       <Route path='' element={<Home />} />
-      <Route path='about' element={<About />} />
-      <Route path='contact' element={<Contact />} />
-      <Route path='shopping' element={<Shooping />} />
+      <Route path='/about' element={<About />} />
+      <Route path='/contact' element={<Contact />} />
+      <Route path='/shopping' element={<Shopping />} />
 
       {/* <Route path='user/:userid' element={<User />} />
       <Route
