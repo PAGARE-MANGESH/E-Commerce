@@ -13,6 +13,7 @@ export default function Header() {
     console.log(user)
 
     return (
+
         <header className="shadow sticky z-50 top-0">
             <nav className=" px-4 lg:px-6 pb-2 text-center pt-2" id='Navber'>
                 <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl text-center">
@@ -32,7 +33,7 @@ export default function Header() {
                             isAuthenticated ? <Link
                                 to="#"
                                 onClick={(e) => logout()}
-                                className="text-orange-700 hover:text-orange-700  border-b-2 border-transparent border-orange-700 focus:border-orange-700 transition-colors duration-300 ease-in-out mr-4"
+                                className="text-orange-700 hover:text-orange-700   mr-4"
                             >
 
                                 Logout
@@ -81,8 +82,7 @@ export default function Header() {
                                 <NavLink
                                     to="/"
                                     className={({ isActive }) =>
-                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700 border-b-2 border-transparent border-orange-700 focus:border-orange-700 transition-colors duration-300 ease-in-out" : ""}  lg:hover:bg-transparent hover:text-orange-700`}
-                                // }border-b border-gray-900 hover:bg-gray-50  lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0
+                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700 " : ""}  lg:hover:bg-transparent hover:text-orange-700`}
                                 >
                                     Home
                                 </NavLink>
@@ -91,8 +91,7 @@ export default function Header() {
                                 <NavLink
                                     to="/shopping"
                                     className={({ isActive }) =>
-                                        // `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700 border-b-2 border-transparent border-orange-700 focus:border-orange-700 transition-colors duration-300 ease-in-out" : ""} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
-                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700 border-b-2 border-transparent border-orange-700 focus:border-orange-700 transition-colors duration-300 ease-in-out" : ""}  lg:hover:bg-transparent hover:text-orange-700`}
+                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700 " : ""}  lg:hover:bg-transparent hover:text-orange-700`}
 
 
                                 >
@@ -103,8 +102,7 @@ export default function Header() {
                                 <NavLink
                                     to="/about"
                                     className={({ isActive }) =>
-                                        // `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700 border-b-2 border-transparent border-orange-700 focus:border-orange-700 transition-colors duration-300 ease-in-out" : ""} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
-                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700 border-b-2 border-transparent border-orange-700 focus:border-orange-700 transition-colors duration-300 ease-in-out" : ""}  lg:hover:bg-transparent hover:text-orange-700`}
+                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700 " : ""}  lg:hover:bg-transparent hover:text-orange-700`}
 
 
                                 >
@@ -115,8 +113,7 @@ export default function Header() {
                                 <NavLink
                                     to="/contact"
                                     className={({ isActive }) =>
-                                        // `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700 border-b-2 border-transparent border-orange-700 focus:border-orange-700 transition-colors duration-300 ease-in-out" : ""} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
-                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700  border-b-2 border-transparent border-orange-700 focus:border-orange-700 transition-colors duration-300 ease-in-out" : ""}  lg:hover:bg-transparent hover:text-orange-700`}
+                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700  " : ""}  lg:hover:bg-transparent hover:text-orange-700`}
 
 
                                 >
