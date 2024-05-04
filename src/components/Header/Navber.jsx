@@ -7,9 +7,16 @@ import HomeLog from '../../assets/Shopping.svg'
 
 // import reactLogo from '../../assets/react.svg'
 
+
+
+
+
+
 export default function Header() {
 
     const { user, loginWithRedirect, isAuthenticated, logout } = useAuth0()
+
+
     console.log(user)
 
     return (
@@ -24,6 +31,7 @@ export default function Header() {
                             className="mr-3 h-12"
                             alt="Logo"
                         />
+
                     </Link>
 
                     <div className="flex items-center lg:order-2">
@@ -33,19 +41,26 @@ export default function Header() {
                             isAuthenticated ? <Link
                                 to="#"
                                 onClick={(e) => logout()}
-                                className="text-orange-700 hover:text-orange-700   mr-4"
+                                className="text-orange-700 hover:text-orange-700 mr-4"
                             >
 
                                 Logout
 
-                            </Link> :
+                            </Link>
+
+                                :
+
                                 <Link
                                     to="#"
-                                    onClick={(e) => loginWithRedirect()}
-                                    className=" hover:text-orange-700 focus:ring-1 focus:ring-gray-100 font-medium rounded-lg text-sm lg:px-5 py-2 lg:py-2.5 focus:outline-none mr-4"
+                                    onClick={() => {
+                                        loginWithRedirect()
+                                    }}
+
+                                    className="hover:text-orange-700 focus:ring-1 focus:ring-gray-100 font-medium rounded-lg text-sm lg:px-5 py-2 lg:py-2.5 focus:outline-none mr-4"
                                 >
 
                                     Login
+
 
                                 </Link>
 
@@ -71,6 +86,10 @@ export default function Header() {
 
 
                         <Switch />
+
+
+
+
 
                     </div>
                     <div
@@ -124,7 +143,7 @@ export default function Header() {
                     </div>
                 </div>
             </nav>
-        </header>
+        </header >
     );
 }
 

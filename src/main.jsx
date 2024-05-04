@@ -13,6 +13,10 @@ import Shopping from '../src/components/Shopping/Product.jsx'
 
 
 
+// toastify 
+
+
+
 
 
 
@@ -45,11 +49,12 @@ import Shopping from '../src/components/Shopping/Product.jsx'
 
 
 const router = createBrowserRouter(
+
   createRoutesFromElements(
 
     <Route path='/' element={<Layout />}>
 
-      <Route path='' element={<Home />} />
+      <Route path='/' element={<Home />} />
       <Route path='/about' element={<About />} />
       <Route path='/contact' element={<Contact />} />
       <Route path='/shopping' element={<Shopping />} />
@@ -62,6 +67,9 @@ const router = createBrowserRouter(
       /> */}
 
     </Route>
+
+
+
   )
 )
 

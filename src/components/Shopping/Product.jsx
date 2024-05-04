@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { TbBellRingingFilled } from 'react-icons/tb';
+import { FaBell } from 'react-icons/fa';
 import watch1 from '../../assets/ncp4.jpg';
 import watch2 from '../../assets/ncp5.jpg';
 import watch3 from '../../assets/ncp4.jpg';
@@ -15,7 +15,9 @@ import AOS from 'aos';
 const ProductPage = () => {
 
     useEffect(() => {
+
         AOS.init({
+
             // Initialize AOS with options here if needed
             // duration: 1000,
             // easing: 'ease-in-out',
@@ -167,9 +169,9 @@ const ProductPage = () => {
 
                         <span className={`ml-2 text-red-400 absolute top-1 right-5`}>
 
-                            {/* <FaBell /> */}
+                            <FaBell />
 
-                            <TbBellRingingFilled />
+                            {/* <TbBellRingingFilled /> */}
 
                         </span>
                     )}
