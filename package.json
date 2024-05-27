@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@auth0/auth0-react": "^2.2.4",
-    "aos": "^2.3.1",
+    "aos": "^2.3.4",
     "bootstrap": "^5.3.3",
     "framer-motion": "^11.0.28",
     "google-map-react": "^2.2.1",

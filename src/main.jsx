@@ -9,7 +9,7 @@ import Layout from '../Layout.jsx'
 import Home from './components/Home/Home.jsx'
 import About from '../src/components/Main/About.jsx'
 import Contact from '../src/components/Main/Contact.jsx'
-import Shopping from '../src/components/Shopping/Product.jsx'
+import Shopping from '../src/components/Shopping/AllProduct.jsx'
 
 
 
@@ -67,7 +67,6 @@ const router = createBrowserRouter(
       /> */}
 
     </Route>
-
 
 
   )

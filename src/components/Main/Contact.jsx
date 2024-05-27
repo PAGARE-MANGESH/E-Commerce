@@ -134,6 +134,7 @@ const ContactPage = () => {
                         title="Google Map"
                         className='shadow-xl'
                     ></iframe> */}
+
                 </div>
             </div>
         </div>

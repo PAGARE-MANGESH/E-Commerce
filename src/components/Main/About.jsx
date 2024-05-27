@@ -44,6 +44,7 @@ const AboutPage = () => {
     const starRating = 5; // Assuming you have a star rating system
 
     return (
+
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -52,7 +53,7 @@ const AboutPage = () => {
             className="min-h-screen  flex justify-center items-center"
         >
             <div className="max-w-7xl mx-auto p-6  rounded-lg  shadow-sm mb-2">
-                <h1 className="text-3xl font-bold mb-6 text-center text-orange-700" data-aos="fade-up" data-aos-delay="500">About Our E-commerce Website</h1>
+                <h1 className="text-3xl font-bold mb-6 text-center text-orange-700" data-aos="fade-up" data-aos-delay="500">About Our E-Commerce Website</h1>
                 <p className="m-14 text-xl text-gray-500 text-center" data-aos="fade-down" data-aos-delay="500">
                     Welcome to our E-commerce Headphone experience! Here, sound meets style, and every beat becomes a statement.
                     Dive into our world of immersive audio and cutting-edge technology. Discover your perfect pair of headphones,
@@ -106,8 +107,6 @@ const AboutPage = () => {
                         Join us in our mission to redefine the online shopping experience!
                     </p>
                 </div>
-
-
             </div>
         </motion.div>
     );
