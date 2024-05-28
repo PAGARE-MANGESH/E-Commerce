@@ -1,6 +1,7 @@
 
 
 import React, { useState, useEffect } from 'react';
+import CartLogo from '../../assets/Shopping.svg'
 import { FaBell } from 'react-icons/fa';
 import Carousel from './Carousel';
 import 'aos/dist/aos.css';
@@ -14,12 +15,16 @@ function DemoProduct() {
     const [selectedProduct, setSelectedProduct] = useState(null);
     const [showNotification, setShowNotification] = useState(false);
 
+
+
+
     const handleGenderChange = (gender) => {
         setSelectedGender(gender);
         if (gender === 'shopping') {
             setShowNotification(false);
         }
     };
+
 
     const addToCart = (product, quantity = 1) => {
         const existingProduct = shopping.find(p => p.id === product.id);
@@ -51,15 +56,18 @@ function DemoProduct() {
         }
     };
 
+
     const handleQuantityChange = (productId, newQuantity) => {
         const quantity = Math.min(Math.max(newQuantity, 1), 5);
         setShopping(shopping.map(p => p.id === productId ? { ...p, quantity } : p));
         setShowNotification(true);
     };
 
+
     const getTotalAmount = () => {
         return shopping.reduce((total, product) => total + product.price * product.quantity, 0).toFixed(2);
     };
+
 
     useEffect(() => {
         fetch(`https://fakestoreapi.com/products`)
@@ -119,32 +127,34 @@ function DemoProduct() {
             : products.filter(product => product.gender === selectedGender);
 
     return (
+
         <div className='container mx-auto p-4'>
+            
             <div className="mb-4">
                 <Carousel />
             </div>
 
             <div className="flex justify-center items-center flex-wrap gap-4 mb-6">
                 <button
-                    className={`px-4 py-2 rounded ${selectedGender === 'all' ? 'bg-orange-500 text-white' : 'bg-gray-200'}`}
+                    className={`px-4 py-2 rounded ${selectedGender === 'all' ? ' text-orange-800 ' : ''}`}
                     onClick={() => handleGenderChange('all')}
                 >
                     All
                 </button>
                 <button
-                    className={`px-4 py-2 rounded ${selectedGender === 'male' ? 'bg-orange-500 text-white' : 'bg-gray-200'}`}
+                    className={`px-4 py-2 rounded ${selectedGender === 'male' ? ' text-orange-800 text-bold' : ''}`}
                     onClick={() => handleGenderChange('male')}
                 >
                     Male
                 </button>
                 <button
-                    className={`px-4 py-2 rounded ${selectedGender === 'female' ? 'bg-orange-500 text-white' : 'bg-gray-200'}`}
+                    className={`px-4 py-2 rounded ${selectedGender === 'female' ? ' text-orange-800 text-bold' : ''}`}
                     onClick={() => handleGenderChange('female')}
                 >
                     Female
                 </button>
                 <button
-                    className={`px-4 py-2 rounded relative ${selectedGender === 'shopping' ? 'bg-orange-500 text-white' : 'bg-gray-200'}`}
+                    className={`px-4 py-2 rounded relative ${selectedGender === 'shopping' ? ' text-orange-800 text-bold' : ''}`}
                     onClick={() => handleGenderChange('shopping')}
                 >
                     MyShopping
@@ -158,14 +168,13 @@ function DemoProduct() {
 
 
 
-
             <div className='grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
                 {filteredProducts.map((product) => (
                     <div key={product.id} className="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
                         <a href="#" onClick={() => setSelectedProduct(product)} className="group relative block">
                             <div className="w-full h-48 overflow-hidden">
                                 <img
-                                    className="w-full h-full object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-105"
+                                    className="w-full h-full object-contain transform transition-transform duration-300 ease-in-out group-hover:scale-105"
                                     src={product.img}
                                     alt={product.Product}
                                 />
@@ -194,10 +203,12 @@ function DemoProduct() {
                                 </div>
                             )}
                             <button
-                                className="w-full px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+                                className="flex w-full px-4 py-3 mt-1 bg-blue-500 text-white rounded-lg hover:bg-blue-600 text-center justify-center "
                                 onClick={() => toggleCart(product)}
                             >
+
                                 {shopping.some(p => p.id === product.id) ? 'Remove from Cart' : 'Add to Cart'}
+                                <img src={CartLogo} className='w-10 h-22 ml-36 absolute ' />
                             </button>
                         </div>
                     </div>
@@ -218,7 +229,7 @@ function DemoProduct() {
                             <p className="text-sm text-gray-500 mb-1"><strong>Gender:</strong> {selectedProduct.gender}</p>
                             <p className="text-sm text-gray-500 mb-4 "><strong>Description:</strong>{selectedProduct.description.substring(2)}</p>
                             {selectedProduct.images.map((image, index) => (
-                                <img key={index} src={image} alt={selectedProduct.Product} className="w-20 h-24 object-cover inline-block mr-2" />
+                                <img key={index} src={image} alt={selectedProduct.Product} className="w-20 h-24 object-contain inline-block mr-2" />
                             ))}
                         </div>
                         <div className="bg-gray-100 p-4 flex justify-end">
@@ -226,7 +237,7 @@ function DemoProduct() {
                                 className="px-4 py-2 bg-blue-500 text-white rounded-lg mr-2"
                                 onClick={() => toggleCart(selectedProduct)}
                             >
-                                {shopping.some(p => p.id === selectedProduct.id) ? 'Remove from Cart' : 'Add to Cart'}
+                                {shopping.some(p => p.id === selectedProduct.id) ? `Remove from Cart  ` : 'Add to Cart'}
                             </button>
                             <button
                                 className="px-4 py-2 bg-gray-500 text-white rounded-lg"
@@ -238,6 +249,8 @@ function DemoProduct() {
                     </div>
                 </div>
             )}
+
+
 
             {selectedGender === 'shopping' && shopping.length > 0 && (
                 <div className='mt-10 p-5'>
@@ -258,6 +271,10 @@ function DemoProduct() {
                     </div>
                 </div>
             )}
+
+
+
+
         </div>
     );
 }

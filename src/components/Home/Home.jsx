@@ -5,6 +5,8 @@ import { useAuth0 } from '@auth0/auth0-react'
 import Home1 from '../../assets/HomeImg.svg';
 import { Link, NavLink } from 'react-router-dom'
 
+import CartLogo from '../../assets/Shopping.svg'
+
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 
@@ -64,11 +66,12 @@ const App = () => {
                             <NavLink
                                 to="/shopping"
                                 className={({ isActive }) =>
-                                    `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700" : ""} p-3 mt-4 bg-orange-500 rounded-2xl text-2xl shadow-xl`
+                                    `flex   duration-200 ${isActive ? "text-orange-700" : ""} p-3 mt-4  rounded-2xl bg-orange-200 text-2xl shadow-xl text-orange-800 hover:text-orange-900`
                                 }
                                 data-aos="fade-up" data-aos-delay="500"
                             >
                                 Explure Our Cart
+                                <img src={CartLogo} className='w-10 h-10 ml-2' />
                             </NavLink>
                         </button>
                     </p>

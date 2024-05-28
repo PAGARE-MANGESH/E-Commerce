@@ -40,7 +40,7 @@ const ToggleButton = () => {
             document.documentElement.classList.add('dark');
 
             document.body.style.backgroundColor = ' black'
-            
+
             document.body.style.color = 'white'
 
         }

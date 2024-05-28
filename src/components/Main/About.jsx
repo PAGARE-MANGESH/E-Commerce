@@ -1,19 +1,13 @@
 
-// import watch3 from '../../assets/ncp4.jpg';
+import watch3 from '../../assets/member.png';
 import Home1 from '../../assets/HomeImg.svg';
-import watch3 from '../../assets/ncp4.jpg';
+// import watch3 from '../../assets/ncp4.jpg';
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 
 import 'aos/dist/aos.css';
 import AOS from 'aos';
-
-
-
-
-
-
 
 
 const AboutPage = () => {
@@ -26,6 +20,7 @@ const AboutPage = () => {
             // duration: 1000,
             // easing: 'ease-in-out',
         });
+
     }, []);
 
 

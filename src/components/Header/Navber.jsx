@@ -3,7 +3,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 
 import { Link, NavLink } from 'react-router-dom'
 import Switch from './ToogleBtn';
-import HomeLog from '../../assets/Shopping.svg'
+import HomeLog from '../../assets/logo.png'
 
 // import reactLogo from '../../assets/react.svg'
 
