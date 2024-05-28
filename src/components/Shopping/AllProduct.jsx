@@ -199,10 +199,10 @@ function DemoProduct() {
                                 <h5 className="text-2xl font-bold mb-2">${product.price}</h5>
                             </a>
                             <p className="text-gray-700 mb-2">Category: {product.category}</p>
-                            <div className='flex aling-center'>
+                            <div className='block md:flex  '>
                                 <p className="text-gray-700 mb-2">Rating: {getStars(product.rating)}</p>
                                 {shopping.some(p => p.id === product.id) && (
-                                    <div className="flex items-center mb-2 ml-10">
+                                    <div className="flex items-center mb-2 ml-10  justify-center">
                                         <strong className="mr-2">Quantity:</strong>
                                         <input
                                             type="number"
@@ -228,11 +228,15 @@ function DemoProduct() {
 
 
                             <button
+
                                 className="flex w-full px-4 py-3 mt-1 bg-blue-500 text-white rounded-lg hover:bg-blue-600 justify-center items-center relative"
+
                                 onClick={() => toggleCart(product)}
                             >
                                 {shopping.some(p => p.id === product.id) ? 'Remove from Cart' : 'Add to Cart'}
+
                                 {/* <img src={CartLogo} className='w-10 h-10 ml-4' /> */}
+
                             </button>
 
 
