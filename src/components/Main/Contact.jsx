@@ -4,7 +4,7 @@ const Contact = () => {
     return (
         <div className="text-center mb-8">
             <h2 className="text-2xl font-bold mb-4 text-orange-700">Contact Us</h2>
-            {/* <div className="mt-5 mb-5 sm:mt-0 p-5" data-aos="fade-right" data-aos-delay="800">
+            <div className="mt-5 mb-5 sm:mt-0 p-5" data-aos="fade-right" data-aos-delay="800">
 
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d142801.02799908794!2d75.16877348345594!3d19.859945636526735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb9815a369bc63%3A0x712d538b29a2a73e!2sAurangabad%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1713765646738!5m2!1sen!2sin"
@@ -17,7 +17,7 @@ const Contact = () => {
                     className='shadow-xl rounded-xl'
                 ></iframe>
 
-            </div> */}
+            </div>
             <form className="max-w-md mx-auto">
                 <div className="mb-4">
                     <input

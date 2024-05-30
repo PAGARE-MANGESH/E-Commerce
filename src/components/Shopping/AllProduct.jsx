@@ -324,7 +324,7 @@ function DemoProduct() {
 
 
             {
-                selectedGender === 'shopping' && shopping.length > 0 && (
+                selectedGender === 'shopping' && shopping.length >= 0 && (
                     <div className='mt-10 p-5'>
                         <h3 className="text-xl font-semibold mb-5">Shopping Cart</h3>
                         {shopping.map(item => (

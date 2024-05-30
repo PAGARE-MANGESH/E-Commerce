@@ -25,7 +25,7 @@ const ServicesPage = () => {
             transition={{ duration: 0.5 }}
             className="min-h-screen flex flex-col items-center p-4 md:p-6"
         >
-            <div className="max-w-7xl w-full rounded-lg shadow-sm mb-6 bg-white p-6">
+            <div className="max-w-7xl w-full rounded-lg shadow-sm mb-6  p-6">
                 {/* <h1 className="text-3xl font-bold mb-6 text-center text-orange-700" data-aos="fade-up">
                     Our Services
                 </h1> */}
