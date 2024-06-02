@@ -185,7 +185,7 @@ function DemoProduct() {
                         <a href="#" onClick={() => setSelectedProduct(product)} className="group relative block">
                             <div className="w-full h-48 overflow-hidden">
                                 <img
-                                    className="w-full h-full object-contain transform transition-transform duration-300 ease-in-out group-hover:scale-105"
+                                    className="w-full  h-full object-contain transform transition-transform duration-300 ease-in-out group-hover:scale-105"
                                     src={product.img}
                                     alt={product.Product}
                                 />
@@ -320,6 +320,7 @@ function DemoProduct() {
                 </div >
             )
             } */}
+
 
 
 

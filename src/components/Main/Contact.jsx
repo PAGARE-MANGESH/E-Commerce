@@ -18,12 +18,12 @@ const Contact = () => {
                 ></iframe>
 
             </div>
-            <form className="max-w-md mx-auto">
+            <form className="max-w-md mx-auto drop-shadow-md ">
                 <div className="mb-4">
                     <input
                         type="text"
                         placeholder="Name"
-                        className="w-full p-2 border rounded-lg"
+                        className="w-full p-2 border rounded-lg text-center"
                         required
                     />
                 </div>
@@ -31,21 +31,21 @@ const Contact = () => {
                     <input
                         type="email"
                         placeholder="Email"
-                        className="w-full p-2 border rounded-lg"
+                        className="w-full p-2 border rounded-lg text-center"
                         required
                     />
                 </div>
                 <div className="mb-4">
                     <textarea
                         placeholder="Message"
-                        className="w-full p-2 border rounded-lg"
+                        className="w-full p-2 border rounded-lg text-center"
                         rows="4"
                         required
                     ></textarea>
                 </div>
                 <button
                     type="submit"
-                    className="w-full p-2 bg-orange-700 text-white rounded-lg hover:bg-orange-600"
+                    className="w-full p-2 bg-orange-700 text-white rounded-lg hover:bg-orange-600 "
                 >
                     Send Message
                 </button>
