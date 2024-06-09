@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => {
     return (
-        <div className="text-center mb-8">
+        <div className="text-center mb-8 m-5">
             <h2 className="text-2xl font-bold mb-4 text-orange-700">Contact Us</h2>
             <div className="mt-5 mb-5 sm:mt-0 p-5" data-aos="fade-right" data-aos-delay="800">
 
@@ -18,7 +18,7 @@ const Contact = () => {
                 ></iframe>
 
             </div>
-            <form className="max-w-md mx-auto drop-shadow-md ">
+            <form className=" max-w-md mx-auto drop-shadow-md ">
                 <div className="mb-4">
                     <input
                         type="text"

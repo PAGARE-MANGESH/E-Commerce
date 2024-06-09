@@ -58,7 +58,7 @@ const ToggleButton = () => {
 
     return (
 
-        <div className={`container ${isDarkMode ? 'dark' : 'light'} mt-2`}>
+        <div className={`container ${isDarkMode ? 'dark' : 'light'} mt-2 p-2`}>
 
             <button
 

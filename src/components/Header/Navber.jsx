@@ -8,6 +8,9 @@ import HomeLog from '../../assets/logo.png'
 // import reactLogo from '../../assets/react.svg'
 
 
+import NewNav from '../Header/NewNavber'
+import { useState } from 'react'
+
 
 
 
@@ -15,6 +18,15 @@ import HomeLog from '../../assets/logo.png'
 export default function Header() {
 
     const { user, loginWithRedirect, isAuthenticated, logout } = useAuth0()
+
+    const [isOpen, setIsOpen] = useState(false)
+
+
+    function toggleMenu() {
+
+        setIsOpen(!isOpen)
+    }
+
 
 
     console.log(user)
@@ -66,6 +78,17 @@ export default function Header() {
 
                         }
 
+                        <div className='hidden md:block'>
+
+                            <Switch />
+
+                        </div>
+
+
+
+
+                        <NewNav />
+
 
                         {/* <Link
                             to="#"
@@ -85,7 +108,8 @@ export default function Header() {
                         </Link> */}
 
 
-                        <Switch />
+                        {/* <Switch /> */}
+
 
 
 
@@ -140,8 +164,16 @@ export default function Header() {
                                 </NavLink>
                             </li>
                         </ul>
+
                     </div>
+
+
+
                 </div>
+
+
+
+
             </nav>
         </header >
     );
