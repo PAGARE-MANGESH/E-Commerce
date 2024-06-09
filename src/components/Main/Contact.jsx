@@ -18,7 +18,7 @@ const Contact = () => {
                 ></iframe>
 
             </div>
-            <form className=" max-w-md mx-auto drop-shadow-md ">
+            <form className=" max-w-md mx-auto drop-shadow-md text-gray-800 ">
                 <div className="mb-4">
                     <input
                         type="text"
