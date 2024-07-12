@@ -71,8 +71,6 @@ const App = () => {
                 </div>
             </div>
 
-
-
             {/* <carousel /> */}
         </>
     );

@@ -8,7 +8,7 @@ import sun from '../../assets/sun.svg'
 
 
 
-const ToggleButton = () => {
+const ToggleButton = ({ Menu }) => {
 
 
 
@@ -23,6 +23,7 @@ const ToggleButton = () => {
     const toggleMode = () => {
 
         setIsDarkMode(prevMode => !prevMode);
+
 
         if (isDarkMode) {
 
@@ -48,13 +49,10 @@ const ToggleButton = () => {
 
     }
 
-    const handleToggle = () => {
+    const toggleMenu = () => {
 
         setIsDarkMode(!isDarkMode);
-
     };
-
-
 
     return (
 
@@ -64,7 +62,10 @@ const ToggleButton = () => {
 
                 className={`toggle ${isDarkMode ? 'dark' : 'light'}`}
 
-                onClick={toggleMode}
+                onClick={() => {
+                    toggleMode()
+                    Menu()
+                }}
 
             >
                 {isDarkMode ? (
@@ -126,6 +127,7 @@ const ToggleButton = () => {
 
         </div>
     );
+
 };
 
 export default ToggleButton;

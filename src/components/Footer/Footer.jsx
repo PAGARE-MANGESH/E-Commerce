@@ -91,7 +91,7 @@ export default function Footer() {
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <span className="text-sm text-gray-500 sm:text-center">
                         © 2024
-                        <a href=" https://pagare-mangesh.github.io/FirstPortfolio/" target='_blank' className="hover:text-orange-700  hover:underline">
+                        <a href="https://pagare-mangesh.github.io/FirstPortfolio/" target='_blank' className="hover:text-orange-700  hover:underline">
                             Mangesh_Pagare
                         </a>
                         . All Rights Reserved.
