@@ -40,19 +40,22 @@ const AboutPage = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="min-h-screen flex flex-col items-center p-4 md:p-6"
+            className="flex flex-col items-center min-h-screen p-4 md:p-6"
         >
-            <div className="max-w-7xl w-full rounded-lg shadow-sm mb-6  p-6">
-                <h1 className="text-3xl font-bold mb-6 text-center text-orange-700" data-aos="fade-up">
+
+            <div className="w-full p-6 mb-6 rounded-lg shadow-sm max-w-7xl">
+
+                <h1 className="mb-6 text-3xl font-bold text-center text-orange-700" data-aos="fade-up">
                     About Our E-Commerce Website
                 </h1>
-                <p className="mb-8 text-xl  text-center" data-aos="fade-down">
+
+                <p className="mb-8 text-xl text-center" data-aos="fade-down">
                     Welcome to our E-commerce Headphone experience! Here, sound meets style, and every beat becomes a statement.
                     Dive into our world of immersive audio and cutting-edge technology. Discover your perfect pair of headphones,
                     where every detail is crafted to elevate your listening experience. Join us on this sonic journey and explore the future of sound.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div className="grid grid-cols-1 gap-8 mb-8 md:grid-cols-2">
                     <div className="flex flex-col items-center">
                         <img
                             src={Home1}
@@ -62,14 +65,14 @@ const AboutPage = () => {
                         />
                     </div>
                     <div className="flex flex-col items-center justify-center">
-                        <h2 className="text-2xl font-bold mb-4 text-orange-700">Our Team</h2>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 ml-15">
+                        <h2 className="mb-4 text-2xl font-bold text-orange-700">Our Team</h2>
+                        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 ml-15">
                             {teamMembers.map((member) => (
                                 <div key={member.id} className="flex items-center space-x-2" data-aos="fade-up">
                                     <img
                                         src={member.image}
                                         alt={member.name}
-                                        className="w-14 h-14 rounded-full"
+                                        className="rounded-full w-14 h-14"
                                     />
                                     <p>{member.name} - {member.role}</p>
                                 </div>
@@ -78,9 +81,9 @@ const AboutPage = () => {
                     </div>
                 </div>
 
-                <div className="text-center mb-8">
-                    <h2 className="text-2xl font-bold mb-4 text-orange-700">Our Achievements</h2>
-                    <p className="text-lg mb-4" data-aos='fade-up'>
+                <div className="mb-8 text-center">
+                    <h2 className="mb-4 text-2xl font-bold text-orange-700">Our Achievements</h2>
+                    <p className="mb-4 text-lg" data-aos='fade-up'>
                         We are honored to have earned a 5-star rating from thousands of satisfied customers.
                         Your trust and support have been instrumental in our continuous growth and improvement.
                     </p>
@@ -89,12 +92,12 @@ const AboutPage = () => {
                     </p>
                 </div>
 
-                <div className="text-center mb-8">
-                    <h2 className="text-2xl font-bold mb-4 text-orange-700">Our Services</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <div className="mb-8 text-center">
+                    <h2 className="mb-4 text-2xl font-bold text-orange-700">Our Services</h2>
+                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
                         {services.map(service => (
                             <div key={service.id} className="p-4 border rounded-lg shadow-sm" data-aos="flip-left">
-                                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                                <h3 className="mb-2 text-xl font-semibold">{service.title}</h3>
                                 <p>{service.description}</p>
                             </div>
                         ))}
@@ -102,9 +105,9 @@ const AboutPage = () => {
                     <ServicesPage />
                 </div>
 
-                <div className="text-center mb-8">
-                    <h2 className="text-2xl font-bold mb-4 text-orange-700">Testimonials</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="mb-8 text-center">
+                    <h2 className="mb-4 text-2xl font-bold text-orange-700">Testimonials</h2>
+                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                         {testimonials.map(testimonial => (
                             <div key={testimonial.id} className="p-4 border rounded-lg shadow-sm" data-aos="flip-right">
                                 <p className="mb-2">"{testimonial.feedback}"</p>
@@ -113,6 +116,7 @@ const AboutPage = () => {
                         ))}
                     </div>
                 </div>
+
             </div>
         </motion.div>
     );

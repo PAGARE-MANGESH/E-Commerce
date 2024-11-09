@@ -105,13 +105,13 @@ function DemoProduct() {
         return (
             <>
                 {Array(filledStars).fill().map((_, i) => (
-                    <svg key={i} className="w-4 h-4 text-yellow-500 inline" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg key={i} className="inline w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.973a1 1 0 00.95.69h4.178c.969 0 1.371 1.24.588 1.81l-3.39 2.46a1 1 0 00-.364 1.118l1.287 3.973c.3.921-.755 1.688-1.539 1.118l-3.39-2.46a1 1 0 00-1.175 0l-3.39 2.46c-.784.57-1.838-.197-1.539-1.118l1.287-3.973a1 1 0 00-.364-1.118L2.236 9.4c-.783-.57-.38-1.81.588-1.81h4.178a1 1 0 00.95-.69l1.286-3.973z" />
                     </svg>
                 ))}
 
                 {Array(emptyStars).fill().map((_, i) => (
-                    <svg key={i + filledStars} className="w-4 h-4 text-gray-300 inline" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg key={i + filledStars} className="inline w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.973a1 1 0 00.95.69h4.178c.969 0 1.371 1.24.588 1.81l-3.39 2.46a1 1 0 00-.364 1.118l1.287 3.973c.3.921-.755 1.688-1.539 1.118l-3.39-2.46a1 1 0 00-1.175 0l-3.39 2.46c-.784.57-1.838-.197-1.539-1.118l1.287-3.973a1 1 0 00-.364-1.118L2.236 9.4c-.783-.57-.38-1.81.588-1.81h4.178a1 1 0 00.95-.69l1.286-3.973z" />
                     </svg>
                 ))}
@@ -139,33 +139,33 @@ function DemoProduct() {
 
     return (
 
-        <div className='container mx-auto p-4'>
+        <div className='container p-4 mx-auto'>
 
             <div className="mb-4">
                 <Carousel />
             </div>
 
-            <div className="flex justify-center font-bold items-center flex-wrap gap-4 mb-6">
+            <div className="flex flex-wrap items-center justify-center gap-4 mb-6 font-bold ">
                 <button
-                    className={`px-4 py-2 rounded ${selectedGender === 'all' ? ' text-orange-700 ' : ''}`}
+                    className={`px-4 py-2 rounded hover:text-orange-700  ${selectedGender === 'all' ? ' text-orange-700' : 'text-gray-600'}`}
                     onClick={() => handleGenderChange('all')}
                 >
                     All
                 </button>
                 <button
-                    className={`px-4 py-2 rounded ${selectedGender === 'male' ? ' text-orange-700 ' : ''}`}
+                    className={`px-4 py-2 rounded hover:text-orange-700  ${selectedGender === 'male' ? ' text-orange-700 ' : 'text-gray-600'}`}
                     onClick={() => handleGenderChange('male')}
                 >
                     Male
                 </button>
                 <button
-                    className={`px-4 py-2 rounded ${selectedGender === 'female' ? ' text-orange-700 ' : ''}`}
+                    className={`px-4 py-2 rounded hover:text-orange-700  ${selectedGender === 'female' ? ' text-orange-700 ' : 'text-gray-600'}`}
                     onClick={() => handleGenderChange('female')}
                 >
                     Female
                 </button>
                 <button
-                    className={`px-4 py-2 rounded relative ${selectedGender === 'shopping' ? ' text-orange-700 ' : ''}`}
+                    className={`px-4 py-2 rounded relative hover:text-orange-700  ${selectedGender === 'shopping' ? ' text-orange-700 ' : 'text-gray-600'}`}
                     onClick={() => handleGenderChange('shopping')}
                 >
                     MyShopping
@@ -179,34 +179,34 @@ function DemoProduct() {
 
 
 
-            <div className='grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
+            <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
                 {filteredProducts.map((product) => (
-                    <div key={product.id} className="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
-                        <a href="#" onClick={() => setSelectedProduct(product)} className="group relative block">
+                    <div key={product.id} className="overflow-hidden border border-gray-200 rounded-lg shadow-lg ">
+                        <a href="#" onClick={() => setSelectedProduct(product)} className="relative block group">
                             <div className="w-full h-48 overflow-hidden">
                                 <img
-                                    className="w-full  h-full object-contain transform transition-transform duration-300 ease-in-out group-hover:scale-105"
+                                    className="object-contain w-full h-full transition-transform duration-300 ease-in-out transform bg-white group-hover:scale-105"
                                     src={product.img}
                                     alt={product.Product}
                                 />
                             </div>
-                            <div className="absolute inset-0 bg-black bg-opacity-25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"></div>
+                            <div className="absolute inset-0 transition-opacity duration-300 ease-in-out bg-black bg-opacity-25 opacity-0 group-hover:opacity-100"></div>
                         </a>
 
                         <div className="p-4 text-gray-500">
-                            <a href="#" onClick={() => setSelectedProduct(product)} className="group">
-                                <h5 className="text-xl font-bold mb-2">{truncateText(product.Product.substring(-2), 20)}</h5>
-                                <h5 className="text-2xl font-bold mb-2">${product.price}</h5>
+                            <a href="#" onClick={() => setSelectedProduct(product)} className="transition duration-100 ease-in-out delay-150 hover:text-orange-700 group">
+                                <h5 className="mb-2 text-xl font-bold">{truncateText(product.Product.substring(-2), 20)}</h5>
+                                <h5 className="mb-2 text-2xl font-bold">${product.price}</h5>
                             </a>
-                            <p className="text-gray-700 mb-2">Category: {product.category}</p>
-                            <div className='block md:flex  '>
-                                <p className="text-gray-700 mb-2">Rating: {getStars(product.rating)}</p>
+                            <p className="mb-2 text-gray-500">Category: {product.category}</p>
+                            <div className='block md:flex '>
+                                <p className="mb-2 text-gray-500">Rating: {getStars(product.rating)}</p>
                                 {shopping.some(p => p.id === product.id) && (
-                                    <div className="flex items-center mb-2 ml-10  justify-center">
+                                    <div className="flex items-center justify-center mb-2 ml-10">
                                         <strong className="mr-2">Quantity:</strong>
                                         <input
                                             type="number"
-                                            className="w-16 px-2 py-1 border rounded text-center"
+                                            className="w-16 px-2 py-1 text-center border rounded"
                                             min="1"
                                             max="5"
                                             value={shopping.find(p => p.id === product.id).quantity}
@@ -218,18 +218,18 @@ function DemoProduct() {
 
 
                             {/* <button
-                                className="flex w-full px-4 py-3 mt-1 bg-blue-500 text-white rounded-lg hover:bg-blue-600 text-center justify-center "
+                                className="flex justify-center w-full px-4 py-3 mt-1 text-center text-white bg-blue-500 rounded-lg hover:bg-blue-600 "
                                 onClick={() => toggleCart(product)}
                             >
 
                                 {shopping.some(p => p.id === product.id) ? 'Remove from Cart' : 'Add to Cart'}
-                                <img src={CartLogo} className='w-10 h-22 ml-36 absolute ' />
+                                <img src={CartLogo} className='absolute w-10 h-22 ml-36 ' />
                             </button> */}
 
 
                             <button
 
-                                className="flex w-full px-4 py-3 mt-1 bg-blue-500 text-white rounded-lg hover:bg-blue-600 justify-center items-center relative"
+                                className="relative flex items-center justify-center w-full px-4 py-3 mt-1 text-white bg-blue-500 rounded-lg hover:bg-blue-600"
 
                                 onClick={() => toggleCart(product)}
                             >
@@ -248,32 +248,32 @@ function DemoProduct() {
 
 
             {selectedProduct && (
-                <div className="fixed mt-6 inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-                    <div className="bg-white rounded-lg overflow-hidden shadow-xl w-full max-w-lg">
-                        <div className="p-6">
-                            <h4 className="text-lg font-medium mb-2">
+                <div className="fixed inset-0 z-50 flex items-center justify-center mt-6 bg-black bg-opacity-50">
+                    <div className="w-full max-w-lg overflow-hidden bg-gray-800 rounded-lg shadow-xl">
+                        <div className="p-6 text-gray-200">
+                            <h4 className="mb-2 text-lg font-medium ">
                                 <span>{selectedProduct.Product}</span>
                             </h4>
-                            <p className="text-sm text-gray-500 mb-1"><strong>Price:</strong> ${selectedProduct.price}</p>
-                            <p className="text-sm text-gray-500 mb-1"><strong>Category:</strong> {selectedProduct.category}</p>
-                            <p className="text-sm text-gray-500 mb-1"><strong>Rating:</strong> {getStars(selectedProduct.rating)}</p>
-                            <p className="text-sm text-gray-500 mb-1"><strong>Gender:</strong> {selectedProduct.gender}</p>
-                            <p className="text-sm text-gray-500 mb-4">
+                            <p className="mb-1 text-sm"><strong>Price:</strong> ${selectedProduct.price}</p>
+                            <p className="mb-1 text-sm"><strong>Category:</strong> {selectedProduct.category}</p>
+                            <p className="mb-1 text-sm"><strong>Rating:</strong> {getStars(selectedProduct.rating)}</p>
+                            <p className="mb-1 text-sm"><strong>Gender:</strong> {selectedProduct.gender}</p>
+                            <p className="mb-4 text-sm">
                                 <strong>Description:</strong> {truncateText(selectedProduct.description.substring(-2), 250)}
                             </p>
                             {selectedProduct.images.map((image, index) => (
-                                <img key={index} src={image} alt={selectedProduct.Product} className="w-20 h-24 object-contain inline-block mr-2" />
+                                <img key={index} src={image} alt={selectedProduct.Product} className="inline-block object-contain w-20 h-24 mr-2" />
                             ))}
                         </div>
-                        <div className="bg-gray-100 p-4 flex justify-end">
+                        <div className="flex justify-end p-4 bg-gray-100">
                             <button
-                                className="px-4 py-2 bg-blue-500 text-white rounded-lg mr-2"
+                                className="px-4 py-2 mr-2 text-white bg-blue-500 rounded-lg"
                                 onClick={() => toggleCart(selectedProduct)}
                             >
                                 {shopping.some(p => p.id === selectedProduct.id) ? 'Remove from Cart' : 'Add to Cart'}
                             </button>
                             <button
-                                className="px-4 py-2 bg-gray-500 text-white rounded-lg"
+                                className="px-4 py-2 text-white bg-gray-500 rounded-lg"
                                 onClick={() => setSelectedProduct(null)}
                             >
                                 Close
@@ -285,51 +285,12 @@ function DemoProduct() {
 
 
 
-            {/* {selectedProduct && (
-                <div className="fixed mt-6 inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-                    <div className="bg-white rounded-lg overflow-hidden shadow-xl w-full max-w-lg">
-                        <div className="p-6">
-                            <h4 className="text-lg font-medium mb-2"> <span>{selectedProduct.Product} </span>  </h4>
-                            <p className="text-sm text-gray-500 mb-1"><strong>Price:</strong> ${selectedProduct.price}</p>
-                            <p className="text-sm text-gray-500 mb-1"><strong>Category:</strong> {selectedProduct.category}</p>
-                            <p className="text-sm text-gray-500 mb-1"><strong>Rating:</strong> {getStars(selectedProduct.rating)}</p>
-                            <p className="text-sm text-gray-500 mb-1"><strong>Gender:</strong> {selectedProduct.gender}</p>
-                            <p className="text-sm text-gray-500 mb-4 "><strong>Description:</strong>{selectedProduct.description.substring(2)}</p>
-                            {selectedProduct.images.map((image, index) => (
-                                <img key={index} src={image} alt={selectedProduct.Product} className="w-20 h-24 object-contain inline-block mr-2" />
-                            ))}
-
-
-
-                        </div>
-                        <div className="bg-gray-100 p-4 flex justify-end">
-                            <button
-                                className="px-4 py-2 bg-blue-500 text-white rounded-lg mr-2"
-                                onClick={() => toggleCart(selectedProduct)}
-                            >
-                                {shopping.some(p => p.id === selectedProduct.id) ? `Remove from Cart  ` : 'Add to Cart'}
-                            </button>
-                            <button
-                                className="px-4 py-2 bg-gray-500 text-white rounded-lg"
-                                onClick={() => setSelectedProduct(null)}
-                            >
-                                Close
-                            </button>
-                        </div>
-                    </div >
-                </div >
-            )
-            } */}
-
-
-
-
             {
                 selectedGender === 'shopping' && shopping.length >= 0 && (
-                    <div className='mt-10 p-5'>
-                        <h3 className="text-xl font-semibold mb-5">Shopping Cart</h3>
+                    <div className='p-5 mt-10'>
+                        <h3 className="mb-5 text-xl font-semibold text-orange-700">Shopping Cart</h3>
                         {shopping.map(item => (
-                            <div key={item.id} className="flex justify-between items-center mb-2 border-b-2 pb-1">
+                            <div key={item.id} className="flex items-center justify-between pb-1 mb-2 border-b-2">
                                 <div>{item.Product}</div>
                                 <div>{item.quantity} x ${item.price} = ${(item.quantity * item.price).toFixed(2)}</div>
                             </div>
@@ -338,7 +299,7 @@ function DemoProduct() {
                             Total Amount: ${getTotalAmount()}
                         </div>
                         <div className="mt-4">
-                            <button className="px-4 py-2 bg-green-500 text-white rounded" onClick={() => alert('Proceeding to buy')}>
+                            <button className="px-4 py-2 text-white bg-green-500 rounded" onClick={() => alert('Proceeding to buy')}>
                                 Proceed to Buy
                             </button>
                         </div>

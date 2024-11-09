@@ -1,19 +1,11 @@
 
 import React, { useEffect } from 'react';
 import { useAuth0 } from '@auth0/auth0-react'
-
 import Home1 from '../../assets/HomeImg.svg';
-import { Link, NavLink } from 'react-router-dom'
-
+import { NavLink } from 'react-router-dom'
 import CartLogo from '../../assets/Shopping.svg'
-
 import 'aos/dist/aos.css';
 import AOS from 'aos';
-
-
-
-
-
 
 const App = () => {
 
@@ -22,22 +14,17 @@ const App = () => {
     useEffect(() => {
 
         AOS.init({
-
-            // Initialize AOS with options here if needed
-            // duration: 1000,
-            // easing: 'ease-in-out',
             duration: 800,
             easing: 'ease-in-out',
-
         });
 
     }, []);
 
     return (
         <>
-            <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-center h-screen mt-2 gap-4">
+            <div className="grid items-center justify-center h-screen grid-cols-1 gap-4 mt-2 lg:grid-cols-2">
                 {/* Left side (image) */}
-                <div className="p-4 flex justify-center lg:justify-start">
+                <div className="flex justify-center p-4 lg:justify-start">
                     <img
                         src={Home1}
                         alt="E-commerce"
@@ -47,13 +34,15 @@ const App = () => {
                     />
                 </div>
                 {/* Right side (text) */}
-                <div className="p-4 md:mb-44 mb-3 ">
-                    <h1 className="text-3xl md:text-4xl  text-orange-700 font-bold text-center lg:text-left mb-10 " data-aos="fade-down" data-aos-delay="500">
+                <div className="p-4 mb-3 md:mb-44 ">
+                    <h1 className="mb-10 text-3xl font-bold text-center text-orange-700 md:text-4xl lg:text-left " data-aos="fade-down" data-aos-delay="500">
                         Welcome To Our E-Commerce
                         {isAuthenticated && <p className="text-orange-700 hover:underline">{user.name}</p>}
                     </h1>
                     <p className="text-lg text-center lg:text-left" data-aos="fade-down" data-aos-delay="500">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec justo vel libero vehicula maximus.<br />
+                        {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec justo vel libero vehicula maximus.<br /> */}
+                        <span className="font-bold text-orange-500 underline">Discover the latest trends</span> and
+                        <span className="font-bold text-orange-500 underline"> unbeatable deals</span>, tailored just for you.
                         <button>
                             <NavLink
                                 to="/shopping"
