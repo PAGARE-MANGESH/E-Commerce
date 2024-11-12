@@ -85,7 +85,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         redirect_uri: window.location.origin
       }}
     >
-
       <RouterProvider router={router} />
     </Auth0Provider>
   </React.StrictMode>,
