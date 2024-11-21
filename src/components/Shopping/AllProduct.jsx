@@ -1,11 +1,16 @@
 
 
-import React, { useState, useEffect } from 'react';
-import CartLogo from '../../assets/Shopping.svg'
+import React, { useState, useEffect, Suspense } from 'react';
 import { FaBell } from 'react-icons/fa';
 import Carousel from './Carousel';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
+
+
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
+
+
 
 function DemoProduct() {
 
@@ -38,14 +43,14 @@ function DemoProduct() {
     };
 
 
-    const removeFromCart = (productId) => {
-        const existingProduct = shopping.find(p => p.id === productId);
-        if (existingProduct.quantity > 1) {
-            setShopping(shopping.map(p => p.id === productId ? { ...p, quantity: p.quantity - 1 } : p));
-        } else {
-            setShopping(shopping.filter(product => product.id !== productId));
-        }
-    };
+    // const removeFromCart = (productId) => {
+    //     const existingProduct = shopping.find(p => p.id === productId);
+    //     if (existingProduct.quantity > 1) {
+    //         setShopping(shopping.map(p => p.id === productId ? { ...p, quantity: p.quantity - 1 } : p));
+    //     } else {
+    //         setShopping(shopping.filter(product => product.id !== productId));
+    //     }
+    // };
 
 
     const toggleCart = (product) => {
@@ -132,10 +137,18 @@ function DemoProduct() {
 
 
     const filteredProducts = selectedGender === 'all'
+
         ? products
         : selectedGender === 'shopping'
             ? shopping
             : products.filter(product => product.gender === selectedGender);
+
+    setTimeout(() => {
+        setLoading(false);
+    }, 1000);
+
+    const [loading, setLoading] = useState(true);
+
 
     return (
 
@@ -176,8 +189,6 @@ function DemoProduct() {
                     )}
                 </button>
             </div>
-
-
 
             <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
                 {filteredProducts.map((product) => (
@@ -246,8 +257,8 @@ function DemoProduct() {
             </div>
 
 
+            {selectedProduct && selectedProduct >= 0 && (
 
-            {selectedProduct && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center mt-6 bg-black bg-opacity-50">
                     <div className="w-full max-w-lg overflow-hidden bg-gray-800 rounded-lg shadow-xl">
                         <div className="p-6 text-gray-200">
@@ -262,7 +273,17 @@ function DemoProduct() {
                                 <strong>Description:</strong> {truncateText(selectedProduct.description.substring(-2), 250)}
                             </p>
                             {selectedProduct.images.map((image, index) => (
-                                <img key={index} src={image} alt={selectedProduct.Product} className="inline-block object-contain w-20 h-24 mr-2" />
+
+                                loading ? (
+                                    <Skeleton
+                                        className="w-20 h-24 "
+                                        baseColor="#333333"
+                                        highlightColor="#4a4a4a"
+                                    />) : (
+
+                                    <img key={index} loading='lazy' src={image} alt={selectedProduct.Product} className="inline-block object-contain w-20 h-24 mr-2" />
+                                )
+
                             ))}
                         </div>
                         <div className="flex justify-end p-4 bg-gray-100">
@@ -285,6 +306,7 @@ function DemoProduct() {
 
 
 
+
             {
                 selectedGender === 'shopping' && shopping.length >= 0 && (
                     <div className='p-5 mt-10'>
@@ -299,15 +321,14 @@ function DemoProduct() {
                             Total Amount: ${getTotalAmount()}
                         </div>
                         <div className="mt-4">
-                            <button className="px-4 py-2 text-white bg-green-500 rounded" onClick={() => alert('Proceeding to buy')}>
+                            <button className="px-4 py-2 text-white bg-green-500 rounded" onClick={() => shopping.length > 0 ? alert("Sorry, we haven't integrated the backend yet. Thank you for your patience!") || setShopping([])
+                                : alert('No Product buy yet')}>
                                 Proceed to Buy
                             </button>
                         </div>
                     </div>
                 )
             }
-
-
 
 
         </div >

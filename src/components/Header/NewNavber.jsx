@@ -13,30 +13,32 @@ function Navber() {
 
 
 
-    const toggleMenu = () => {
-
-        setIsOpen(!isOpen)
-    }
-
-
     const Menu = () => {
-        // setIsOpen(!isOpen)
-        setIsOpen(false);
+        setIsOpen(!isOpen)
+        handleScrollToTop()
+    };
+
+
+    const handleScrollToTop = () => {
+        window.scrollTo({
+            top: 5,
+            behavior: 'smooth', // Adds smooth scrolling animation
+        });
     };
 
 
     return (
 
-        <nav className=' md:hidden  text-gray-100 p-2 '>
+        <nav className='p-2 text-gray-100 md:hidden'>
 
 
             <div className='md:hidden' >
                 <button onClick={() => {
-                    toggleMenu()
-                }} className='float-right  mr-1 ml-1'>
+                    Menu()
+                }} className='float-right ml-1 mr-1'>
 
                     <svg
-                        className="h-6 w-6"
+                        className="w-6 h-6"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -71,7 +73,7 @@ function Navber() {
             </div>
 
             {
-            /* <a className='ml-5 mt-5'> LOGO </a> */}
+            /* <a className='mt-5 ml-5'> LOGO </a> */}
 
             {
 
@@ -80,23 +82,15 @@ function Navber() {
                     <div className='text-center  bg-white/40 rounded-2xl shadow-lg backdrop-blur-[8.1px] border border-white/30"  md:hidden absolute left-5 right-5 top-16'>
 
 
-                        {/* <ul className='block text-black/100 mb-2  border-b '>
-                            <li className='ml-5 mb-3 mt-3 hover:underline ' title='Home'> Home </li>
-                            <li className='ml-5 mb-3 hover:underline ' title='About'> About </li>
-                            <li className='ml-5 mb-3 hover:underline ' title='Services'> Services </li>
-                            <li className='ml-5 mb-3 hover:underline  ' title='Conatct'> Contact </li>
-                        </ul> */}
 
 
-
-                        <ul className="block text-black/100 mb-2  border-b  font-medium lg:flex-row lg:space-x-8 lg:mt-0 text-center ">
+                        <ul className="block mb-2 font-medium text-center border-b text-black/100 lg:flex-row lg:space-x-8 lg:mt-0 ">
                             <li>
                                 <NavLink
                                     to="/"
                                     onClick={() => setIsOpen(false)}
 
                                     className={({ isActive }) =>
-
                                         `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700 " : ""}  lg:hover:bg-transparent hover:text-orange-700`}
                                 >
                                     Home
