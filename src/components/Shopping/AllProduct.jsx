@@ -305,8 +305,6 @@ function DemoProduct() {
             )}
 
 
-
-
             {
                 selectedGender === 'shopping' && shopping.length >= 0 && (
                     <div className='p-5 mt-10'>
