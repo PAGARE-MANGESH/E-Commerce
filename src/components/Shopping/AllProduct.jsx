@@ -257,7 +257,7 @@ function DemoProduct() {
             </div>
 
 
-            {selectedProduct && selectedProduct >= 0 && (
+            {selectedProduct && (
 
                 <div className="fixed inset-0 z-50 flex items-center justify-center mt-6 bg-black bg-opacity-50">
                     <div className="w-full max-w-lg overflow-hidden bg-gray-800 rounded-lg shadow-xl">
