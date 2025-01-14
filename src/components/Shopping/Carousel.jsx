@@ -1,4 +1,4 @@
-0
+
 
 import React from 'react'
 
@@ -11,21 +11,21 @@ function Carousel() {
         <div id="carouselExampleControls" className=" carousel slide carousel-fade" data-bs-ride="carousel">
             <div className="carousel-inner">
                 <div className="carousel-item active">
-                    <img src={watch1} className="d-block  object-fit h-64 w-full " alt="..." />
+                    <img src={watch1} className="w-full h-64 d-block object-fit " alt="..." />
                     <div className="carousel-caption d-none d-md-block">
                         {/* <h5>First slide label</h5>
                         <p>Some representative placeholder content for the first slide.</p> */}
                     </div>
                 </div>
                 <div className="carousel-item">
-                    <img src={watch2} className="d-block object-fit h-64 w-full " alt="..." />
+                    <img src={watch2} className="w-full h-64 d-block object-fit " alt="..." />
                     <div className="carousel-caption d-none d-md-block">
                         {/* <h5>First slide label</h5>
                         <p>Some representative placeholder content for the first slide.</p> */}
                     </div>
                 </div>
                 <div className="carousel-item">
-                    <img src={watch3} className="d-block object-fit h-64 w-full " alt="..." />
+                    <img src={watch3} className="w-full h-64 d-block object-fit " alt="..." />
                     <div className="carousel-caption d-none d-md-block">
                         {/* <h5>First slide label</h5>
                         <p>Some representative placeholder content for the first slide.</p> */}

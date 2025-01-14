@@ -12,6 +12,26 @@ import 'react-loading-skeleton/dist/skeleton.css';
 
 
 
+import { toast, ToastContainer, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
+function notify() {
+    toast('Sorry, we haven\'t integrated the backend yet. Thank you for your patience!😇', {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
+    });
+}
+
+
 function DemoProduct() {
 
     const [products, setProducts] = useState([]);
@@ -42,15 +62,6 @@ function DemoProduct() {
         }
     };
 
-
-    // const removeFromCart = (productId) => {
-    //     const existingProduct = shopping.find(p => p.id === productId);
-    //     if (existingProduct.quantity > 1) {
-    //         setShopping(shopping.map(p => p.id === productId ? { ...p, quantity: p.quantity - 1 } : p));
-    //     } else {
-    //         setShopping(shopping.filter(product => product.id !== productId));
-    //     }
-    // };
 
 
     const toggleCart = (product) => {
@@ -147,6 +158,15 @@ function DemoProduct() {
         setLoading(false);
     }, 1000);
 
+
+
+
+
+
+
+
+
+
     const [loading, setLoading] = useState(true);
 
 
@@ -155,7 +175,7 @@ function DemoProduct() {
         <div className='container p-4 mx-auto'>
 
             <div className="mb-4">
-                <Carousel />
+                <ToastContainer />
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-4 mb-6 font-bold ">
@@ -228,14 +248,7 @@ function DemoProduct() {
                             </div>
 
 
-                            {/* <button
-                                className="flex justify-center w-full px-4 py-3 mt-1 text-center text-white bg-blue-500 rounded-lg hover:bg-blue-600 "
-                                onClick={() => toggleCart(product)}
-                            >
 
-                                {shopping.some(p => p.id === product.id) ? 'Remove from Cart' : 'Add to Cart'}
-                                <img src={CartLogo} className='absolute w-10 h-22 ml-36 ' />
-                            </button> */}
 
 
                             <button
@@ -246,7 +259,7 @@ function DemoProduct() {
                             >
                                 {shopping.some(p => p.id === product.id) ? 'Remove from Cart' : 'Add to Cart'}
 
-                                {/* <img src={CartLogo} className='w-10 h-10 ml-4' /> */}
+
 
                             </button>
 
@@ -319,8 +332,7 @@ function DemoProduct() {
                             Total Amount: ${getTotalAmount()}
                         </div>
                         <div className="mt-4">
-                            <button className="px-4 py-2 text-white bg-green-500 rounded" onClick={() => shopping.length > 0 ? alert("Sorry, we haven't integrated the backend yet. Thank you for your patience!") || setShopping([])
-                                : alert('No Product buy yet')}>
+                            <button className="px-4 py-2 text-white bg-green-500 rounded" onClick={() => notify()}>
                                 Proceed to Buy
                             </button>
                         </div>

@@ -1,6 +1,10 @@
 
 
 import React, { useState } from 'react';
+
+import { toast, ToastContainer, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import ContactSvg from '../../assets/Contact.svg';
 
 const Contact = () => {
@@ -9,19 +13,46 @@ const Contact = () => {
     const [Email, setEmail] = useState('')
     const [Message, setMessage] = useState('')
 
+
+
+    function notify() {
+        toast('I got your message, Thank you! 😇', {
+            position: "top-center",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+        });
+    }
+
+
+
     const handelForm = (e) => {
         e.preventDefault()
 
-        setName('')
-        setEmail('')
-        setMessage('')
 
-        alert("Sorry, we haven't integrated the backend yet. Thank you for your patience!");
+        setTimeout(() => {
+            notify()
+            setName('')
+            setEmail('')
+            setMessage('')
+        }, 2000);
+
+
+
+        // alert("Sorry, we haven't integrated the backend yet. Thank you for your patience!");
     }
 
     return (
 
         <div className="w-full p-6 backdrop-blur-md">
+            <span>
+                <ToastContainer />
+            </span>
 
             <div className="max-w-6xl mx-auto text-center">
 
